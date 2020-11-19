@@ -29,17 +29,12 @@ body {
   color: #b5b5b5;
 }
 .hero {
-  background-image: url(../img/hero.jpg);
-  height: 30vh;
+  background-image: url(../img/hero1.webp);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   position: relative;
-}
-@media (min-width: 661px) {
-  .hero {
-    height: 50vh;
-  }
+  height: calc(100vh - 71.200px);
 }
 .hero:after {
   content: "";

@@ -1,4 +1,5 @@
 // https://jigsaw.w3.org/css-validator/
+// https://medium.com/@MissTipsi/las-10-webs-de-restaurantes-que-m%C3%A1s-nos-gustan-c6ddad5948bd
 html {
     box-sizing: border-box;
     font-size: 62.5%;
@@ -34,15 +35,12 @@ body {
 
 ////////// Hero
 .hero {
-    background-image: url(../img/hero.jpg);
-    height: 30vh;
+    background-image: url(../img/hero1.webp);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     position: relative;
-    @media (min-width:661px) {
-        height: 50vh;
-    }
+    height: ~"calc(100vh - 71.200px)";
     &:after {
         content: "";
         position: absolute;
