@@ -1,0 +1,10 @@
+Negocio de: food truck
+
+- Productos a ofrecer (menú de los productos)
+
+CSS --> organizar etiquetas según objeto
+class típicas (hacerla la más estándar posible)
+
+header
+nav
+footer
