@@ -19,8 +19,12 @@ body {
 /////////// Menú de navegació
 
 .nav {
+    position: fixed;
+    width: 100%;
+    z-index: 10;
     background-color: @primary;
     padding: 1rem 0;
+    box-shadow: -1px -1px 5px 1px #000000de;
     ul {
         display: flex;
         justify-content: space-around;
@@ -59,9 +63,10 @@ body {
     }
     .content-hero {
         position: relative;
-        z-index: 100;
+        z-index: 2;
         a {
             color: white;
+            line-height: 1;
             font-weight: 700;
             font-size: 2.6rem;
             text-decoration: none;
@@ -73,46 +78,83 @@ body {
 }
 
 ////// MAIN
+.main-content--image {
+    img {
+        width: 100%;
+    }
+}
+.main-content--text {
+    color: white;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h2 {
+        font-size: 4rem;
+    }
+    p {
+        font-size: 1.8rem;
+        margin-bottom: 5rem;
+    }
+    a {
+        color: white;
+        line-height: 1;
+        font-weight: 700;
+        font-size: 2.6rem;
+        text-decoration: none;
+        letter-spacing: 0.3rem;
+        border: 3px solid white;
+        padding: 1.5rem 2rem;
+        transition: 1s ease all;
+        &:hover {
+            color: black;
+            border: 3px solid black;
+            background-color: white;
+        }
+    }
+}
 .main {
     .main-content {
+        line-height: 0;
         background-color: black;
         display: grid;
         grid-template-columns: 2fr 1.5fr;
     }
-    .main-content--image {
-        img {
-            width: 100%;
-        }
-    }
-    .main-content--text {
-        color: white;
-        align-self: center;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        h2 {
-            font-size: 4rem;
-        }
-        p {
-            font-size: 1.8rem;
-            margin-bottom: 5rem;
-        }
-        a {
-            color: white;
-            font-weight: 700;
-            font-size: 2.6rem;
-            text-decoration: none;
-            letter-spacing: 0.3rem;
-            border: 3px solid white;
-            padding: 1.5rem 2rem;
-            transition: 1s ease all;
-            &:hover {
-                color: black;
-                border: 3px solid black;
-                background-color: white;
-            }
-        }
-    }
+    // .main-content--image {
+    //     img {
+    //         width: 100%;
+    //     }
+    // }
+    // .main-content--text {
+    //     color: white;
+    //     align-self: center;
+    //     display: flex;
+    //     flex-direction: column;
+    //     align-items: center;
+    //     h2 {
+    //         font-size: 4rem;
+    //     }
+    //     p {
+    //         font-size: 1.8rem;
+    //         margin-bottom: 5rem;
+    //     }
+    //     a {
+    //         color: white;
+    //         line-height: 1;
+    //         font-weight: 700;
+    //         font-size: 2.6rem;
+    //         text-decoration: none;
+    //         letter-spacing: 0.3rem;
+    //         border: 3px solid white;
+    //         padding: 1.5rem 2rem;
+    //         transition: 1s ease all;
+    //         &:hover {
+    //             color: black;
+    //             border: 3px solid black;
+    //             background-color: white;
+    //         }
+    //     }
+    // }
     .main-content--menu {
         background-color: white;
         grid-template-columns: 1.5fr 2fr;
@@ -133,4 +175,40 @@ body {
             }
         }
     }
+}
+
+
+// PÁGINA ESMORZARS
+.article {
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    line-height: 0;
+    &:nth-child(even) {
+        .article--image {
+            order: 1;
+        }
+    }
+    .article--text {
+        color: black;
+        letter-spacing: 2px;
+        p {
+            line-height: 1.4;
+            padding: 2rem 6rem;
+            padding-bottom: 0;
+            margin: 0;
+        }
+    }
+    .article--image {
+        img {
+            width: 100%;
+        }
+    }
+}
+
+.span {
+    font-weight: 700;
+    padding: 0;
+    line-height: 0;
+    letter-spacing: 1px;
 }
