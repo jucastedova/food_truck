@@ -77,6 +77,11 @@ img {
   background-color: #0F273E;
   transition: 1s ease all;
 }
+@media (max-width: 767.99px) {
+  .main-content--image {
+    height: 50vh;
+  }
+}
 .main-content--image img {
   width: 100%;
   object-fit: cover;
@@ -88,6 +93,12 @@ img {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+@media (max-width: 767.99px) {
+  .main-content--text {
+    height: 50vh;
+    justify-content: center;
+  }
 }
 .main-content--text h2 {
   font-size: calc(2.2rem + 1vw);
@@ -118,6 +129,11 @@ img {
   display: grid;
   grid-template-columns: 2fr 1.5fr;
 }
+@media (max-width: 767.99px) {
+  .main .main-content {
+    display: block;
+  }
+}
 .main .main-content--menu {
   background-color: white;
   grid-template-columns: 1.5fr 2fr;
@@ -144,6 +160,11 @@ img {
   grid-template-columns: 1fr 1fr;
   line-height: 0;
 }
+@media (max-width: 767.99px) {
+  .article {
+    display: block;
+  }
+}
 .article:nth-child(even) .article--image {
   order: 1;
 }
@@ -152,11 +173,26 @@ img {
   letter-spacing: 2px;
   padding: 2em 0;
 }
+@media (max-width: 767.99px) {
+  .article .article--text {
+    height: 50vh;
+  }
+}
 .article .article--text p {
   line-height: 1.4;
   padding: 2rem 6rem;
   padding-bottom: 0;
   margin-bottom: 0;
+}
+@media (max-width: 382.99px) {
+  .article .article--text p {
+    line-height: 1.1;
+  }
+}
+@media (max-width: 767.99px) {
+  .article .article--image {
+    height: 50vh;
+  }
 }
 .article .article--image img {
   width: 100%;
