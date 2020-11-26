@@ -11,6 +11,16 @@ body {
   font-size: 1.6rem;
   margin: 0;
 }
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+img {
+  max-width: 100%;
+}
 .nav {
   position: fixed;
   width: 100%;
@@ -22,12 +32,9 @@ body {
 .nav ul {
   display: flex;
   justify-content: space-around;
-  list-style: none;
-  padding: 0;
 }
 .nav ul a {
   color: white;
-  text-decoration: none;
 }
 .nav ul a:hover {
   color: #b5b5b5;
@@ -72,6 +79,8 @@ body {
 }
 .main-content--image img {
   width: 100%;
+  object-fit: cover;
+  height: 100%;
 }
 .main-content--text {
   color: white;
@@ -81,10 +90,10 @@ body {
   align-items: center;
 }
 .main-content--text h2 {
-  font-size: 4rem;
+  font-size: calc(2.2rem + 1vw);
 }
 .main-content--text p {
-  font-size: 1.8rem;
+  font-size: calc(1.4rem + 0.5vw);
   margin-bottom: 5rem;
 }
 .main-content--text a {
@@ -141,6 +150,7 @@ body {
 .article .article--text {
   color: black;
   letter-spacing: 2px;
+  padding: 2em 0;
 }
 .article .article--text p {
   line-height: 1.4;
@@ -156,4 +166,27 @@ body {
   padding: 0;
   line-height: 0;
   letter-spacing: 1px;
+}
+.footer {
+  padding: 3rem 0;
+  background-color: #3e3e3e;
+}
+.footer ul {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+.footer ul li a {
+  color: white;
+}
+.footer ul li a:after {
+  content: "|";
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.footer ul li:last-of-type a:after {
+  content: none;
+}
+.main1 {
+  padding-top: 71.2px;
 }

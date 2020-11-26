@@ -16,6 +16,19 @@ body {
     margin: 0;
 }
 
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
 /////////// Menú de navegació
 
 .nav {
@@ -28,11 +41,8 @@ body {
     ul {
         display: flex;
         justify-content: space-around;
-        list-style: none;
-        padding: 0;
         a {
             color: white;
-            text-decoration: none;
             &:hover {
                 color: #b5b5b5;
             }
@@ -86,6 +96,8 @@ body {
 .main-content--image {
     img {
         width: 100%;
+        object-fit: cover;
+        height: 100%;
     }
 }
 .main-content--text {
@@ -95,10 +107,14 @@ body {
     flex-direction: column;
     align-items: center;
     h2 {
-        font-size: 4rem;
+        
+        // font-size: 4rem;
+
+        font-size: ~"calc(2.2rem + 1vw)";
     }
     p {
-        font-size: 1.8rem;
+        // font-size: 1.8rem;
+        font-size: ~"calc(1.4rem + 0.5vw)";
         margin-bottom: 5rem;
     }
     a {
@@ -125,41 +141,6 @@ body {
         display: grid;
         grid-template-columns: 2fr 1.5fr;
     }
-    // .main-content--image {
-    //     img {
-    //         width: 100%;
-    //     }
-    // }
-    // .main-content--text {
-    //     color: white;
-    //     align-self: center;
-    //     display: flex;
-    //     flex-direction: column;
-    //     align-items: center;
-    //     h2 {
-    //         font-size: 4rem;
-    //     }
-    //     p {
-    //         font-size: 1.8rem;
-    //         margin-bottom: 5rem;
-    //     }
-    //     a {
-    //         color: white;
-    //         line-height: 1;
-    //         font-weight: 700;
-    //         font-size: 2.6rem;
-    //         text-decoration: none;
-    //         letter-spacing: 0.3rem;
-    //         border: 3px solid white;
-    //         padding: 1.5rem 2rem;
-    //         transition: 1s ease all;
-    //         &:hover {
-    //             color: black;
-    //             border: 3px solid black;
-    //             background-color: white;
-    //         }
-    //     }
-    // }
     .main-content--menu {
         background-color: white;
         grid-template-columns: 1.5fr 2fr;
@@ -197,6 +178,7 @@ body {
     .article--text {
         color: black;
         letter-spacing: 2px;
+        padding: 2em 0;
         p {
             line-height: 1.4;
             padding: 2rem 6rem;
@@ -216,4 +198,37 @@ body {
     padding: 0;
     line-height: 0;
     letter-spacing: 1px;
+}
+
+////////// FOOTER
+.footer {
+    padding: 3rem 0;
+    background-color: #3e3e3e;
+    ul {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        li {
+            a {
+                color: white;
+                &:after {
+                    content: "|";
+                    padding-left: 1rem;
+                    padding-right: 1rem;
+                }
+            }
+            &:last-of-type {
+                a {
+                    &:after {
+                        content: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+////
+.main1 {
+    padding-top: 71.2px;
 }
