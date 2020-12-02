@@ -29,7 +29,13 @@ img {
 }
 
 /////////// Menú de navegació
-
+///
+// li a:hover:not(.active) {
+//     background-color: #111;
+//   }
+// .active {
+    
+// }
 .nav {
     position: fixed;
     width: 100%;
@@ -42,12 +48,18 @@ img {
         justify-content: space-around;
         a {
             color: white;
-            &:hover {
+            &:hover:not(.active) {
                 color: #b5b5b5;
             }
         }
     }
+    .active {
+        color: #96c7af;
+        // color: #009688;
+        font-weight: 700;
+    }
 }
+
 
 ////////// Hero
 .hero {
@@ -253,3 +265,4 @@ img {
 .main1 {
     padding-top: 71.2px;
 }
+

@@ -38,8 +38,12 @@ img {
 .nav ul a {
   color: white;
 }
-.nav ul a:hover {
+.nav ul a:hover:not(.active) {
   color: #b5b5b5;
+}
+.nav .active {
+  color: #96c7af;
+  font-weight: 700;
 }
 .hero {
   background-image: url(../img/hero1.webp);
