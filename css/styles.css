@@ -53,8 +53,26 @@ img {
   position: relative;
   height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.hero h1 {
+  color: white;
+  z-index: 100;
+  position: relative;
+  z-index: 2;
+  font-family: 'Texturina', serif;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 10%;
+  font-size: calc(1.8rem + 1vw);
+}
+@media (max-width: 661px) {
+  .hero h1 {
+    width: 80%;
+    margin-bottom: 20%;
+  }
 }
 .hero:after {
   content: "";
